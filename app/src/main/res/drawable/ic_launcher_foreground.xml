@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Centered within 66dp safe zone (21 to 87 on 108 canvas) -->
+    <!-- Lotus Center Petal -->
+    <path
+        android:pathData="M54,32 C48,44 48,58 54,72 C60,58 60,44 54,32 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="32"
+                android:endX="54"
+                android:endY="72"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#E07A5F" />
+                <item android:offset="1.0" android:color="#F4A261" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Lotus Left Petal -->
+    <path
+        android:pathData="M54,54 C42,42 32,50 32,60 C32,68 44,72 54,72 C48,66 46,60 54,54 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="32"
+                android:startY="42"
+                android:endX="54"
+                android:endY="72"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#81A4CD" />
+                <item android:offset="1.0" android:color="#3D5A80" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Lotus Right Petal -->
+    <path
+        android:pathData="M54,54 C66,42 76,50 76,60 C76,68 64,72 54,72 C60,66 62,60 54,54 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="76"
+                android:startY="42"
+                android:endX="54"
+                android:endY="72"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#81A4CD" />
+                <item android:offset="1.0" android:color="#3D5A80" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Lotus Base Pedestal / Water Ripple -->
+    <path
+        android:pathData="M38,76 C46,80 62,80 70,76 C65,74 43,74 38,76 Z"
+        android:fillColor="#E29578" />
+    <!-- Glowing Mindful Halo Dot -->
+    <path
+        android:pathData="M54,26m-3,0a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"
+        android:fillColor="#E07A5F" />
+</vector>
