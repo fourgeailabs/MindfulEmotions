@@ -1,7 +1,7 @@
 # Mindful Emotions
 
 [![Android Build & Release APK](https://github.com/fourgeailabs/mindfulemotions/actions/workflows/build.yml/badge.svg)](https://github.com/fourgeailabs/mindfulemotions/actions/workflows/build.yml)
-**Version:** `1.05.00` | **Package ID:** `com.fourgeailabs.mindfulemotions`
+**Version:** `1.05.01` | **Package ID:** `com.fourgeailabs.mindfulemotions`
 
 A peaceful, calming mindfulness reminder application designed with soft warm pastel aesthetics and minimalist typography. Its primary purpose is to present full-screen check-ins at scheduled times throughout the day, prompting users to pause, become aware of their emotional state, reflect on curated wisdom quotes, and dismiss notifications via an intuitive tactile swipe-away gesture.
 
@@ -58,7 +58,11 @@ A peaceful, calming mindfulness reminder application designed with soft warm pas
 
 ## 📋 What's New & Release History
 
-### Version 1.05.00 (Current Release)
+### Version 1.05.01 (Current Release)
+- **GitHub Actions Keystore Signing Fix**: Resolved `validateSigningDebug` keystore validation failure on CI by introducing dual-method keystore provisioning and graceful fallback checks in Gradle configuration.
+- **Universal CI/CD Triggers**: Configured automatic triggers for all branches, pull requests, and manual workflow dispatches.
+
+### Version 1.05.00
 - **Calm Corner Section & Guided Breathing Exercise:**
   - Added a dedicated Calm Corner tab and Home page entry card for de-escalating stress and anxiety.
   - Implemented an animated shrinking and expanding breathing circle with soothing pastel radiance and real-time seconds countdown.

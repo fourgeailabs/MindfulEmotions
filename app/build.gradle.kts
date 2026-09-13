@@ -17,8 +17,8 @@ android {
     applicationId = "com.fourgeailabs.mindfulemotions"
     minSdk = 24
     targetSdk = 36
-    versionCode = 6
-    versionName = "1.05.00"
+    versionCode = 7
+    versionName = "1.05.01"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
@@ -32,10 +32,13 @@ android {
       keyPassword = System.getenv("KEY_PASSWORD")
     }
     create("debugConfig") {
-      storeFile = file("${rootDir}/debug.keystore")
-      storePassword = "android"
-      keyAlias = "androiddebugkey"
-      keyPassword = "android"
+      val customKeystore = file("${rootDir}/debug.keystore")
+      if (customKeystore.exists()) {
+        storeFile = customKeystore
+        storePassword = "android"
+        keyAlias = "androiddebugkey"
+        keyPassword = "android"
+      }
     }
   }
 

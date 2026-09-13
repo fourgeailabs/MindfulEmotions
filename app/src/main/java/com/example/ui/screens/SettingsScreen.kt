@@ -443,7 +443,7 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(14.dp))
 
                     Text(
-                        text = "Version: 1.05.00",
+                        text = "Version: 1.05.01",
                         style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Medium),
                         color = PastelTextSecondary
                     )
@@ -666,6 +666,15 @@ fun WhatsNewDialog(onDismiss: () -> Unit) {
     var expandedIndex by remember { mutableStateOf<Int?>(null) }
 
     val updates = listOf(
+        ReleaseUpdate(
+            version = "1.05.01",
+            title = "CI/CD & Keystore Signing Stability",
+            highlights = listOf(
+                "Resolved GitHub Actions validateSigningDebug keystore validation by implementing resilient dual-method keystore provisioning.",
+                "Automated multi-branch, tag, and manual workflow dispatch triggers for continuous APK release builds.",
+                "Safe fallback to system debug keystore if local file is absent."
+            )
+        ),
         ReleaseUpdate(
             version = "1.05.00",
             title = "Calm Corner & Guided Breathing Exercise",
