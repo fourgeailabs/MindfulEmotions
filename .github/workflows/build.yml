@@ -2,10 +2,7 @@ name: Android Build & Release APK
 
 on:
   push:
-    branches: [ "**" ]
-    tags: [ "**" ]
   pull_request:
-    branches: [ "**" ]
   workflow_dispatch:
 
 permissions:
@@ -39,12 +36,11 @@ jobs:
           fi
 
       - name: Assemble Debug APK
-        run: |
-          gradle assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
-      - name: Verify APK Generated
+      - name: Verify APK Output
         run: |
-          echo "Listing generated APK files:"
+          echo "Verifying generated APK:"
           ls -la app/build/outputs/apk/debug/
 
       - name: Upload APK Artifact
@@ -52,7 +48,6 @@ jobs:
         with:
           name: mindful-emotions-debug-apk
           path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
 
       - name: Create GitHub Release with APK
         if: startsWith(github.ref, 'refs/tags/')
