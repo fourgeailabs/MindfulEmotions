@@ -1,6 +1,6 @@
 {
   "name": "Mindful Emotions",
-  "description": "A peaceful mindfulness reminder app with customizable time and Mon-Sun schedules, full-screen emotion check popups, calming wisdom quotes, and swipe-to-dismiss.",
+  "description": "A peaceful mindfulness reminder app with Calm Corner guided breathing, customizable schedules, full-screen emotion check popups, calming wisdom quotes, and swipe-to-dismiss.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

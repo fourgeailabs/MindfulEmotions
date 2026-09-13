@@ -1,7 +1,7 @@
 # Mindful Emotions
 
 [![Android Build & Release APK](https://github.com/fourgeailabs/mindfulemotions/actions/workflows/build.yml/badge.svg)](https://github.com/fourgeailabs/mindfulemotions/actions/workflows/build.yml)
-**Version:** `1.04.00` | **Package ID:** `com.fourgeailabs.mindfulemotions`
+**Version:** `1.05.00` | **Package ID:** `com.fourgeailabs.mindfulemotions`
 
 A peaceful, calming mindfulness reminder application designed with soft warm pastel aesthetics and minimalist typography. Its primary purpose is to present full-screen check-ins at scheduled times throughout the day, prompting users to pause, become aware of their emotional state, reflect on curated wisdom quotes, and dismiss notifications via an intuitive tactile swipe-away gesture.
 
@@ -9,6 +9,17 @@ A peaceful, calming mindfulness reminder application designed with soft warm pas
 
 ## 🌸 Key Features
 
+- **Calm Corner & Guided Breathing Exercise:**
+  - Dedicated de-escalation sanctuary featuring a guided expanding and shrinking breathing orb animation.
+  - Smooth visual transitions synchronized with inhalation, breath retention, exhalation, and stillness pauses.
+  - Multiple evidence-based breathing techniques:
+    - **Box Breathing (4-4-4-4):** Used for instant focus, calming heart rate, and resetting the nervous system.
+    - **4-7-8 Relaxing Breath:** Powerful vagal nerve activation to rapidly de-escalate acute anxiety and distress.
+    - **Calm Balance (4-4):** Simple equal rhythm for effortless centering anytime during the day.
+    - **Deep Sigh (4-2-6):** Extended exhalation rhythm to release physical and emotional tension.
+  - Gentle sensory haptic cues on breath phase transitions, enabling eyes-closed mindfulness practice.
+  - Collapsible Body De-escalation Checklist with 3 somatic physical resets: dropping shoulders, unclenching the jaw, and grounding feet.
+  - Instant one-tap access directly from the Home Screen.
 - **Home Page Top-Center Wisdom Quotes:**
   - Featured prominent wisdom reflections positioned front-and-center on the app's home screen.
   - Centered theme badges, quotation marks, and calming typography for daily encouragement.
@@ -20,7 +31,7 @@ A peaceful, calming mindfulness reminder application designed with soft warm pas
 - **Subtle Tactile & Haptic Feedback:**
   - Subtle, soothing sensory vibration triggers when swiping away an emotion check-in notification from Android's status bar.
   - Interactive haptic micro-ticks during swipe gestures and distinct, soft completion feedback on dismissal.
-  - Gentle sensory feedback upon completing interactions: saving mood reflections, scheduling check-ins, cycling quotes, or selecting emotion feeling chips.
+  - Gentle sensory feedback upon completing interactions: saving mood reflections, scheduling check-ins, cycling quotes, breathing cues, or selecting emotion feeling chips.
   - Fully customizable via a dedicated "Subtle Haptic Feedback" switch in Settings.
 - **1,000 Daily Mindfulness Prompts:**
   - Built-in library of 1,000 gentle, introspective prompts encouraging users to reflect on their day, emotions, growth, and gratitude.
@@ -47,7 +58,16 @@ A peaceful, calming mindfulness reminder application designed with soft warm pas
 
 ## 📋 What's New & Release History
 
-### Version 1.04.00 (Current Release)
+### Version 1.05.00 (Current Release)
+- **Calm Corner Section & Guided Breathing Exercise:**
+  - Added a dedicated Calm Corner tab and Home page entry card for de-escalating stress and anxiety.
+  - Implemented an animated shrinking and expanding breathing circle with soothing pastel radiance and real-time seconds countdown.
+  - Included 4 evidence-based breathing presets: Box Breathing (4-4-4-4), 4-7-8 Relaxing Breath, Calm Balance (4-4), and Deep Sigh (4-2-6).
+  - Integrated gentle sensory haptic cues on breath phase changes (inhale, hold, exhale) for eyes-closed relaxation.
+  - Added an interactive Body De-escalation Checklist with 3 somatic grounding cues (drop shoulders, unclench jaw, ground feet).
+  - Track total breath cycles completed during each session.
+
+### Version 1.04.00
 - **Top-Center Wisdom Quotes on Home Page:** Placed curated quotes front-and-center on the main home screen, providing an uplifting daily reminder every time the user opens the app.
 - **Interactive Quote Cycling & Shuffle:** Users can tap the card or the refresh button to effortlessly cycle through wisdom reflections on peace, gratitude, love, life, and anger.
 - **Haptic Tactile Polish:** Added gentle micro-ticks when cycling quotes on the home page for a soothing physical sensation.

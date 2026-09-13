@@ -443,7 +443,7 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(14.dp))
 
                     Text(
-                        text = "Version: 1.04.00",
+                        text = "Version: 1.05.00",
                         style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Medium),
                         color = PastelTextSecondary
                     )
@@ -666,6 +666,18 @@ fun WhatsNewDialog(onDismiss: () -> Unit) {
     var expandedIndex by remember { mutableStateOf<Int?>(null) }
 
     val updates = listOf(
+        ReleaseUpdate(
+            version = "1.05.00",
+            title = "Calm Corner & Guided Breathing Exercise",
+            highlights = listOf(
+                "Brand-new Calm Corner section designed to help de-escalate acute stress and overwhelm through rhythmic somatic breathing.",
+                "Guided shrinking and expanding breathing circle animation with soothing pastel aura, phase prompts, and real-time second countdown.",
+                "Curated evidence-based breathing presets: Box Breathing (4-4-4-4), 4-7-8 Relaxing Breath, Calm Balance (4-4), and Deep Sigh (4-2-6).",
+                "Gentle sensory haptic cues on breath phase transitions (inhale, hold, exhale) so you can close your eyes and breathe naturally.",
+                "Collapsible Body De-escalation Checklist with 3 somatic physical resets: dropping shoulders, unclenching jaw, and grounding feet.",
+                "Direct Home Page entry card for instant one-tap access to calming breathing exercises."
+            )
+        ),
         ReleaseUpdate(
             version = "1.04.00",
             title = "Top-Center Wisdom Quotes on Home Page",

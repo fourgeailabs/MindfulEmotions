@@ -34,6 +34,7 @@ import androidx.compose.material.icons.filled.Alarm
 import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.FormatQuote
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Spa
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -67,6 +68,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.ui.components.FullScreenEmotionCheckContent
+import com.example.ui.screens.CalmCornerScreen
 import com.example.ui.screens.MoodJournalScreen
 import com.example.ui.screens.QuotesHistoryScreen
 import com.example.ui.screens.SchedulesScreen
@@ -197,7 +199,7 @@ fun MainAppScreen(viewModel: MainViewModel) {
                         icon = {
                             Icon(Icons.Default.Alarm, contentDescription = "Schedules")
                         },
-                        label = { Text("Reminders", fontSize = 11.sp) },
+                        label = { Text("Reminders", fontSize = 10.sp) },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = PastelPeach,
                             selectedTextColor = PastelPeach,
@@ -212,9 +214,26 @@ fun MainAppScreen(viewModel: MainViewModel) {
                         selected = selectedTab == 1,
                         onClick = { selectedTab = 1 },
                         icon = {
+                            Icon(Icons.Default.SelfImprovement, contentDescription = "Calm Corner")
+                        },
+                        label = { Text("Calm", fontSize = 10.sp) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = PastelPeach,
+                            selectedTextColor = PastelPeach,
+                            indicatorColor = PastelPeachLight,
+                            unselectedIconColor = PastelTextSecondary,
+                            unselectedTextColor = PastelTextSecondary
+                        ),
+                        modifier = Modifier.testTag("nav_calm_corner")
+                    )
+
+                    NavigationBarItem(
+                        selected = selectedTab == 2,
+                        onClick = { selectedTab = 2 },
+                        icon = {
                             Icon(Icons.Default.EditNote, contentDescription = "Mood Journal")
                         },
-                        label = { Text("Journal", fontSize = 11.sp) },
+                        label = { Text("Journal", fontSize = 10.sp) },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = PastelPeach,
                             selectedTextColor = PastelPeach,
@@ -226,12 +245,12 @@ fun MainAppScreen(viewModel: MainViewModel) {
                     )
 
                     NavigationBarItem(
-                        selected = selectedTab == 2,
-                        onClick = { selectedTab = 2 },
+                        selected = selectedTab == 3,
+                        onClick = { selectedTab = 3 },
                         icon = {
                             Icon(Icons.Default.FormatQuote, contentDescription = "Wisdom & History")
                         },
-                        label = { Text("Wisdom", fontSize = 11.sp) },
+                        label = { Text("Wisdom", fontSize = 10.sp) },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = PastelPeach,
                             selectedTextColor = PastelPeach,
@@ -243,12 +262,12 @@ fun MainAppScreen(viewModel: MainViewModel) {
                     )
 
                     NavigationBarItem(
-                        selected = selectedTab == 3,
-                        onClick = { selectedTab = 3 },
+                        selected = selectedTab == 4,
+                        onClick = { selectedTab = 4 },
                         icon = {
                             Icon(Icons.Default.Settings, contentDescription = "Settings")
                         },
-                        label = { Text("Settings", fontSize = 11.sp) },
+                        label = { Text("Settings", fontSize = 10.sp) },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = PastelPeach,
                             selectedTextColor = PastelPeach,
@@ -274,17 +293,21 @@ fun MainAppScreen(viewModel: MainViewModel) {
                         onDeleteSchedule = { viewModel.deleteSchedule(it) },
                         onTriggerTestCheckIn = {
                             viewModel.showFullScreenPopup()
+                        },
+                        onNavigateToCalmCorner = {
+                            selectedTab = 1
                         }
                     )
-                    1 -> MoodJournalScreen(
+                    1 -> CalmCornerScreen()
+                    2 -> MoodJournalScreen(
                         journalEntries = journalEntries,
                         onAddEntry = { viewModel.addJournalEntry(it) },
                         onDeleteEntry = { viewModel.deleteJournalEntry(it) }
                     )
-                    2 -> QuotesHistoryScreen(
+                    3 -> QuotesHistoryScreen(
                         logs = logs
                     )
-                    3 -> SettingsScreen(
+                    4 -> SettingsScreen(
                         settings = settings,
                         onUpdatePromptWording = { viewModel.updatePromptWording(it) },
                         onUpdateUseAndroidAlarm = { viewModel.updateUseAndroidAlarm(it) },

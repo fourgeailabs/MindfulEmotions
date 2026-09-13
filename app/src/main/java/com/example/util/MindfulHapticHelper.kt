@@ -132,4 +132,27 @@ object MindfulHapticHelper {
             // Ignore if vibration fails
         }
     }
+
+    /**
+     * Gentle sensory cue for breathing transitions (Inhale, Hold, Exhale).
+     * Soft and comforting so users can follow the rhythm with their eyes closed.
+     */
+    fun triggerBreathingCue(context: Context) {
+        if (!isHapticsEnabled(context)) return
+        val vibrator = getVibrator(context) ?: return
+        if (!vibrator.hasVibrator()) return
+
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                val timings = longArrayOf(0, 16, 24, 18)
+                val amplitudes = intArrayOf(0, 70, 0, 95)
+                vibrator.vibrate(VibrationEffect.createWaveform(timings, amplitudes, -1))
+            } else {
+                @Suppress("DEPRECATION")
+                vibrator.vibrate(25)
+            }
+        } catch (e: Exception) {
+            // Ignore if vibration fails
+        }
+    }
 }

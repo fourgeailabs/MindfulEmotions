@@ -17,8 +17,8 @@ android {
     applicationId = "com.fourgeailabs.mindfulemotions"
     minSdk = 24
     targetSdk = 36
-    versionCode = 5
-    versionName = "1.04.00"
+    versionCode = 6
+    versionName = "1.05.00"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
